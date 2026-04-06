@@ -11,7 +11,7 @@
 🔗 [Watch demo online](https://youtu.be/ojUOIIVmvQ4)
 
 ## Screenshots
-_Data base relationship:_
+_Database relationship:_
 
 ![./docs/screenshot.png](https://github.com/Mr-Rincon/POP---Digital-Planner-Organizer/blob/main/Documentation/screenshot-6.png)
 
