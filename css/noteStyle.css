@@ -1,0 +1,461 @@
+/*==  === === === === ===  NOTES   === === === === === ==*/
+
+.notes {
+    /* max-width: 1100px; */
+    box-sizing: border-box;
+    /* padding: 15px; */
+}
+
+
+.dropdownAndBar{
+	display: flex;
+    justify-content: center;
+    padding: 0px 200px;
+}
+
+.parent {
+    display: grid;
+    grid-template-columns: 100% 55px;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+
+.collapsible { /* Collapsible style*/
+    color: #000;
+    cursor: pointer;
+    padding: 15px;
+    width: 100%;
+    text-align: left;
+    outline: none;
+    background-color: #EAEAEA;
+    border: 1px solid #000;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.active, .collapsible:hover {
+    background-color: #ccc;
+}
+
+.collapsible:after {
+    content: '\002B';
+    color: #000;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: "\2212";
+}
+
+.content {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+    background-color: transparent;
+    box-sizing: border-box;
+}
+
+
+.newNoteBarContainer {
+    line-height: 1.7rem;    
+    background-color: #EAEAEA;
+    border-radius: 5px;    
+	box-shadow: 1px 2px 5px 1px rgba(0,0,0,0.55);
+	box-sizing: border-box;
+	overflow: hidden;
+    transition: all 0.5s ease-out;
+    margin: 5px;
+}
+
+
+.buttonsAndInputSeparator {
+    padding: 15px;
+	box-sizing: border-box;
+}
+
+.newNoteBarItemStyle {
+    width: 100%;
+    padding: 5px;
+    outline: none;
+    border: none;
+	box-sizing: border-box;
+}
+
+.newNoteBarTitle {
+    border-bottom: 1px solid #999999;
+    background-color: #EAEAEA;
+}
+
+.newNoteBarBody {
+    margin-top: 5px;
+    box-sizing: border-box;
+    resize: none;
+    background-color: #EAEAEA;
+}
+
+
+.newNoteBarTitle:focus, .newNoteBarBody:focus{
+	background-color: #DFDFDF;
+}
+
+.newNoteCategoryAndNewNoteDateParent {
+    display: flex;    
+    justify-content: space-between;
+}
+
+.smallOptionsStyle{    
+    font-size: 0.7rem;
+    color: #770;
+    cursor: pointer;
+    line-height: 1rem;
+}
+
+/* .newNoteCategory{
+    
+} */
+
+.newNoteDate p {
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+}
+
+.newNoteButtons {
+    display: flex;
+    justify-content: space-between;
+    font-size: 2.5rem;
+}
+
+.newNoteButtons div {
+    width: 100px;
+    height: 50px;
+    background-color: #777;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.newNoteButtons div:first-child {
+    background-color: rgb(148, 65, 65);
+    border-radius: 0px 0px 0px 5px;
+}
+
+.newNoteButtons div:last-child {
+    background-color: rgb(69, 146, 99);
+    border-radius: 0px 0px 5px 0px;
+}
+
+.newNoteButtons div:hover{
+    background-color: rgba(0, 0, 0, 0.685);
+}
+
+
+.createNewCategory{
+    text-overflow: ellipsis;
+    max-width: 200px;
+    box-sizing: border-box;
+    height: 1.7rem;
+    overflow: hidden;
+}
+
+.createNewCategory:hover{
+    height: 100%;
+}
+
+.createNewCategory input{
+    width: 150px;
+    box-sizing: border-box;
+    font-size: 0.8rem;
+    margin: 4px;
+}
+/*== == == ==*/
+
+
+
+.displayCategoryDropdown .dropdownFace{ /* Display category dropdown STYLE*/
+    width: 50px;
+    height: 50px;
+    line-height: 1.7rem;
+    border-radius: 5px;
+    margin-left: 5px;
+    background-color: #EAEAEA;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;    
+    align-items: center;
+	cursor: pointer;
+}
+
+
+.categoryDropdownPosition { /* Display category dropdown POSITION */
+    position: relative;
+    float: right;
+    box-sizing: border-box;
+}
+
+
+/* container of all the notes */
+.containerOfNotesFromDB {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    align-items: flex-start;
+}
+
+.item { /*This items dhould be added to each of the notes to make it bahave correctly*/
+    order: 0;
+    flex: 0 1 auto;
+    align-self: auto;
+	margin: 10px;
+}
+
+/*== == == ==*/
+
+
+/*== Notes card styles ==*/
+
+.noteFrame{
+	width: 270px;
+	min-width: 250px;
+	height: 250px;
+	margin-right: 1rem;
+	margin-bottom: 1rem;
+	border: #999999 solid 2px;
+	border-radius: 1rem;
+	padding: 5px 5px 2px 5px;
+	background-color: #EAEAEA;
+    box-shadow: 5px 5px 11px #A2B1C6 , -5px -5px 11px  #eee  ;
+}
+
+.cardTitle{
+	font-weight: bold;
+	color: #767785;
+	border-bottom: 2px solid darkgray;
+	border-radius: 10px 10px 0px 0px;
+	line-height: 1.7rem;
+	font-size: 1.2rem;
+	padding: 5px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+
+
+.dropbtn { /* Dropdown button in the note copy, move, share, delete STYLE */
+	border-radius: 50%;
+	background-color: transparent;
+	padding: 5px 8px;
+	border: none;
+	cursor: pointer;
+}
+
+.dropdownPosition { /* Dropdown Circle POSITION */
+  position: relative;
+  float: right;
+  right: 25px;
+  top: 20px;
+}
+
+.dropdown-content { /* Behavior of dropdowns START*/
+  display: none;
+  position: absolute;
+  background-color: #EAEAEA;
+  min-width: 100px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  font-size: 1rem;
+  z-index: 1;
+}
+
+.dropdown-content-rigth {
+  right: 0;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 6px 8px;
+  text-decoration: none;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px;
+}
+
+.dropdown-content a:hover {background-color: #ccc}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #ccc;
+} /* Behavior of dropdowns END*/
+
+
+
+.cardBody{
+	line-height: 1.5rem;
+	color: #999999;
+	padding: 5px;
+	overflow: auto;
+    height: 200px;
+}
+
+.cardBody::-webkit-scrollbar{
+width:3px;
+}::-webkit-scrollbar-track{
+background:#e4e1e16b;
+border-radius:100px;
+}::-webkit-scrollbar-thumb{
+background:#5455556c;
+border-radius:100px;
+height: 5px;
+}
+
+.noteBodyFromDB{
+    min-height: 170px;
+}
+
+
+.expandHeight{
+    height: 100%;
+}
+
+/* === === === === === */
+
+/* === === === === ===  === === === === ===  === === === === === */
+
+
+
+
+.deleteOptions{ /* Delete Yes option button hidding */
+    display: none;
+}
+
+.deleteOptionsShow{ /* Delete Yes option button showing */
+    display: block;
+    background-color: #f0b7b7;
+    font-weight: bold;
+}
+
+
+.niceAlert{ /* Nice alert to display messages - style*/
+    width: 300px;
+    height: 50px;
+    background-color: thistle;
+    opacity: 0.8;
+    position: fixed;
+    bottom: 10px;
+    border: rgba(0, 0, 0, 0.3) solid 1px;
+    border-radius: 4px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: -350px;
+    transition: all 0.6s ease-in;
+}
+
+.niceAlertShow{ /* Show nice alert */
+    right: 20px;
+}
+
+
+
+
+
+
+
+
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    margin: auto;
+    /* padding: 20px; */
+    border: 1px solid #888;
+    width: 50%;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #000;
+    float: right;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* == RESPONSIVE ACTIONS == */
+
+
+@media (max-width: 900px) {    
+
+    .dropdownAndBar{
+        padding: 0px 110px;
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .item {
+        flex: 1 1 auto;
+    }
+
+    .containerOfNotesFromDB {        
+        justify-content: center;
+    }
+
+    .dropdownAndBar{
+        padding: 0px 50px;
+    }
+    
+}
+
+/* === === === === ===  === === === === ===  === === === === === */
+
+

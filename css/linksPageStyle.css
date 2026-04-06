@@ -1,0 +1,307 @@
+.links .collapsableAndCategory{ /* Collapsable for adding a new link and category dropdown container*/
+    display: flex;
+    justify-content: space-between;
+}
+
+.links .collapsableAddNew{  /* Collapsable for adding a new link */
+    width: 90%;
+    text-align: center;
+    box-sizing: border-box;
+    background-color: #EAEAEA;
+    border-radius: 7px;
+	box-shadow: 1px 2px 5px 1px rgba(0,0,0,0.55);
+    padding: 0px 10px 10px 10px;
+    overflow: hidden;
+    height: 50px;
+    margin-bottom: 15px;
+}
+
+.links .collapsableAddNew  .addNewBtn{ /* Parent of the input for Title area*/
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.links .collapsableAddNew  .addNewBtn input{
+    width: 100%;
+    background-color: #EAEAEA;
+    line-height: 2rem;
+    border: none;
+    border-bottom: #888 solid 1px;
+}
+
+.links .collapsableAddNew .collapsableContent{ /* Content of the collapsable */
+    width: 100%;
+    height: 50px;
+}
+
+.links .collapsableAddNew .collapsableContent textarea{ /* Textarea style */
+    width: 100%;
+    height: 100%;    
+    resize: none;
+    box-sizing: border-box;
+    border: none;
+    background-color: #EAEAEA;
+}
+
+.links .collapsableAddNew .secondaryCollapsableMenu{ /* Category selection area*/
+    color: #555;
+    width: 200px;
+    text-align: left;
+    padding: 10px 5px;
+    box-sizing: border-box;
+    font-size: 0.7rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 100%;
+}
+
+.secondaryCollapsableMenu .pickedCategory:hover{
+    cursor: pointer;
+}
+
+
+
+.links .collapsableAddNew .collapsableBottomButtons{ /* Buttons at the botton of the collapsable*/
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 50px;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.links .collapsableAddNew .collapsableBottomButtons .cancelButton,
+.links .collapsableAddNew .collapsableBottomButtons .sendButton{
+    width: 50%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.links .collapsableAddNew .collapsableBottomButtons .cancelButton:hover,
+.links .collapsableAddNew .collapsableBottomButtons .sendButton:hover{
+    filter: brightness(0.8);
+    cursor: pointer;
+}
+
+.links .collapsableAddNew .collapsableBottomButtons .cancelButton{
+    background-color: #a04444;
+    border-radius: 5px 0px 0px 5px;
+}
+
+.links .collapsableAddNew .collapsableBottomButtons .sendButton{
+    background-color: green;
+    border-radius: 0px 5px 5px 0px;
+}
+
+.links .collapsableAndCategory .displayCategoriesBtn{ /* Pick category from dropdown*/
+    background-color: #EAEAEA;
+    width: 50px;
+    height: 50px;
+    font-size: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    box-shadow: 1px 2px 5px 1px rgba(0,0,0,0.55);
+}
+
+.displayCategoriesBtnPopupPosition{
+    top: 50px;
+    right: 0;
+}
+
+.links .collapsableAndCategory .displayCategoriesBtn:hover{    
+    /* filter: brightness(0.9); */
+    background-color: #ddd;
+    cursor: pointer;
+}
+
+
+
+
+.popup:hover .popupMenu{ /* POPUP */
+    display: block;
+}
+
+.popupMenu{
+    background-color: #EAEAEA;
+    min-width: 100px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    font-size: 1rem;
+    z-index: 1;
+    position: absolute;
+    display: none;
+}
+
+.popupMenu a{    
+    color: black;
+    padding: 6px 8px;
+    display: block;
+    text-decoration: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 200px;
+}
+
+.popupMenu a:hover{
+    background-color: #ccc;
+}
+
+.popupRelative{
+    position: relative;
+}
+
+.inputInPopup .inputArea{ /* Inputs inside of the popup */
+    padding: 0px 3px 3px 3px;
+}
+
+.inputInPopup .inputArea input{
+    display: none;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5px 5px;
+}
+
+.inputInPopup:hover input{
+    display: block;
+}
+
+
+
+.individualLink{ /* Card to show the information of the links*/
+    width: 300px;
+    height: 70px;
+    border: solid 1px black;
+    border-radius: 5px;
+    display: flex;
+    box-sizing: border-box;
+    background-color: #EAEAEA;
+    margin: 10px;
+}
+
+.individualLinkPic{
+    height: 100%;
+    width: 70px;
+    border-right: solid 1px black;
+    border-radius: 5px 0px 0px 5px;
+    box-sizing: border-box;
+    font-size: 3rem;
+}
+
+.individualLinkPic img{
+    width: 100%;
+    height: 100%;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.individualLinkPic .hoverPic{
+  transition: .5s ease;
+  opacity: 0;
+  top: -65px;
+  position: relative;
+  text-align: center;
+}
+
+.individualLinkPic:hover .hoverPic{    
+  opacity: 1;
+}
+
+.individualLinkInfo{
+    /* background-color: thistle; */
+    width: 230px;
+    height: 68px;
+    border-radius: 0px 5px 5px 0px;
+    box-sizing: border-box;
+}
+
+.individualLinkInfo .header{
+    /* background-color: teal; */
+    width: 100%;
+    height: 34px;
+    display: flex;
+}
+
+.individualLinkInfo .header .title{
+    /* background-color: teal; */
+    width: 180px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+}
+
+.individualLinkInfo .header .menuarea{
+    /* background-color: tomato; */
+    width: 50px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0px 5px 0px 0px;
+}
+
+.individualLinkInfo .header .menu{
+    /* background-color: grey; */
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.individualLinkInfo .header .menu:hover{
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+.individualLinkInfo .header .menu .circleMenu{
+    top: 30px;
+    right: 0;
+}
+
+.individualLinkInfo .body{
+    background-color: #ccc;
+    width: 230px;
+    height: 33px;
+    border-top: solid 1px black;
+    border-radius: 0px 0px 5px 0px;
+    display: flex;
+    align-items: center;
+}
+
+.individualLinkInfo .body span, .individualLinkInfo .header .title span{
+    margin-left: 5px;
+    display: block;
+    align-items: center;
+    text-decoration: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.containerItemsFromDb{
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+
+
+/*INFO:
+
+-Flex box:
+    align-items: center; ESTE ES PARA CENTRAR VERTICALMENTE
+    justify-content: center;STE ES PARA CENTRAR HORIZONTALMENTE
+
+*/

@@ -1,0 +1,755 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta property="og:url"           content="http://diegos-link.c1.biz/" /> <!-- Open Graph tags to customize shared link previews. -->
+	<meta property="og:type"          content="website" />
+	<meta property="og:title"         content="POP" />
+	<meta property="og:description"   content="The golden organizator, organize your life with Pop." />
+	<meta property="og:image"         content="http://diegos-link.c1.biz/pop/logo.png" />
+	<title>POP</title>
+	<link rel="stylesheet" type="text/css" href="css/icons.css"><!--Font created for this website using iconmoon-->
+    <link rel="stylesheet" type="text/css" href="css/toolsKit.css">
+	<link rel="stylesheet" type="text/css" href="css/page2MenusStyle.css">
+	<link rel="stylesheet" type="text/css" href="css/page2ContentStyle.css">
+	<link rel="stylesheet" type="text/css" href="css/noteStyle.css">
+	<link rel="stylesheet" type="text/css" href="css/linksPageStyle.css">
+	<link rel="stylesheet" type="text/css" href="css/contactStyle.css">
+	<link rel="stylesheet" type="text/css" href="css/passwordStyle.css">
+</head>
+
+<body>
+
+
+
+
+<nav class="makeitFlexBoxParentSpaceBetween"><!--Start of the nav bar-->
+
+	<section class="section makeitFlexBoxParentCenter toggleCall">
+		<i class="icon-lightmenu icon-2x mousePointer" id="menuToggle"></i>
+	</section>
+	
+	<section class="section makeitFlexBoxParentCenter">
+		<a href="#"  id="getBigMenu"><img src="img/logo/logotext.png" class="navBarHeight" alt=""></a>
+	</section>
+	
+	<section class="section makeitFlexBoxParentCenter">
+		<img class="profilePic imgSettings mousePointer lightUser" src="https://image.flaticon.com/icons/svg/747/747376.svg" id="profilePicToggle" alt="">
+	</section>
+
+</nav><!--End of the nav bar-->
+
+
+
+<div class="menustyle shadow1" id="menu"><!--Left top menu-->
+	<ul>
+		<li>
+		<div class="search">
+			<input class="searchInput" type="text" placeholder="Search">
+		</div>
+		</li>
+		<li><a href="#" id="leftMenuNotes"><i class="icon-lightnotess icon-2x"></i> Notes</a></li>
+		<li><a href="#" id="leftMenuCalendar"><i class="icon-lightcalendar icon-2x"></i> Calendar</a></li>
+		<li><a href="#" id="leftMenuReminders"><i class="icon-lightreminder icon-2x"></i> Reminder</a></li>
+		<li><a href="#" id="leftMenuLinks"><i class="icon-lightlinks icon-2x"></i> Links</a></li>
+		<li><a href="#" id="leftMenuContacts"><i class="icon-lightcontact icon-2x"></i> Contacts</a></li>
+		<li><a href="#" id="leftMenuPasswords"><i class="icon-lightpasswords icon-2x"></i> Passwords</a></li>
+	<hr>
+		<li><a href="#" id="leftMenuBin"><i class="icon-lightbin icon-2x"></i> Bin</a></li>
+
+	<span class="navButtomBtns"><!-- buttons at the bottom of the menu -->
+		<li><a href="#" id="leftMenuLights"><span class="icon-lightturnofflight icon-2x"></span> </a></li>
+		<li><a href="#" id="leftMenuInfo"><span class="icon-information icon-2x"></span> </a></li>
+	</span>
+	
+	</ul>
+</div>
+
+
+
+<div class="profileMenuStyle shadow1" id="profileMenu"> <!-- Right top menu -->
+	<ul>
+		<li><a href="#" id="rightMenuUserProfile"><i class="icon-lightusuario icon-2x"></i> Profile</a></li>
+		<li><a href="#" id="rightMenuChangePassword"><i class="icon-lightpasswords icon-2x"></i> Change Password</a></li>
+		<li><a href="#" id="rightMenuChangePic"><i class="icon-lightchangepic icon-2x"></i> Change Picture</a></li>
+		<li><a href="#" id="rightMenuLogOut"><i class="icon-lightlogout icon-2x"></i> Log Out</a></li>	
+	</ul>
+</div>
+
+
+<!-- CONTENT OF THE WEBSITE -->
+<div id="content-box">
+
+	<div id="defaultView" class="menuContent sh">
+
+		<div id="bigMenu"><!-- Big menu -->
+	
+			<h1>Hi, <span id="username">username</span></h1>
+	
+			<div class="bigMenuButtonsParent">
+	
+				<div id="bigMenuNotes"> <i class="icon-lightnotess bigMenuButtons"></i> </div>
+				<div id="bigMenuCalendar"> <i class="icon-lightcalendar bigMenuButtons"></i> </div>
+				<div id="bigMenuReminders"> <i class="icon-lightreminder bigMenuButtons"></i> </div>
+				<div id="bigMenuLinks"> <i class="icon-lightlinks bigMenuButtons"></i> </div>
+				<div id="bigMenuContacts"> <i class="icon-lightcontact bigMenuButtons"></i> </div>
+				<div id="bigMenuPasswords"> <i class="icon-lightpasswords bigMenuButtons"></i> </div>
+				<div id="bigMenuBin"> <i class="icon-lightbin bigMenuButtons"></i> </div>
+				<div id="bigMenuLogOut"> <i class="icon-lightlogout bigMenuButtons"></i> </div>
+	
+			</div>
+		</div>
+		
+	</div>
+
+	<div id="resultsFromDB">
+
+		<div class="notes menuContent" id="notesID"> <!-- Notes -->
+
+			<div class="dropdownAndBar parent"> <!-- Drop down and bar of adding new note -->
+				
+				<div class="collapsibleChildNewNote">
+					
+					<button type="button" class="collapsible shadow2">Add new note...</button>
+				
+					<div class="content">
+
+						<div class="newNoteBarContainer" id="newNoteBarContainer">
+		
+							<div class="buttonsAndInputSeparator">
+
+								<div>
+									<input type="hidden" id="newNoteIdInput">
+								</div>
+				
+								<div>
+									<input type="text" placeholder="Add new note..." class="newNoteBarItemStyle newNoteBarTitle" id="newNoteTitleInput" value="">
+								</div>
+				
+								<div>
+									<textarea name="" id="newNoteInput" cols="100" rows="10" placeholder="Type here..." class="newNoteBarItemStyle newNoteBarBody" value=""></textarea>
+								</div>
+		
+								<div class="newNoteCategoryAndNewNoteDateParent">
+		
+									<div class="smallOptionsStyle newNoteCategory">
+		
+										<div class="displayCategoryDropdown">
+											
+											<div class="dropdown ">
+												<p>Category: <span id="displayInputValueCategory">inputAssignCategoryForNewNote Value</span></p>
+												
+												<div class="dropdown-content">
+
+													<div><a href="#" class="displayAllCategories" id="displayAllCategories">All</a></div>											
+													
+													<div class="categoriesFromDB" id="addNewNoteCategory">
+														<!-- all the categories from DB -->
+													</div>
+													
+													<div class="createNewCategory">
+														<a href="#">+ new category</a>
+														<input type="text" placeholder="Add new category" value="Uncategorised" id="inputAssignCategoryForNewNote">
+													</div>
+
+												</div>
+											</div>
+											
+										</div>
+		
+									</div>
+		
+									<div class="smallOptionsStyle newNoteDate">
+										<!-- <p>Creation: <span id="todayDate">Today date appears here!! Also can be used to display small updates to users!</span></p> -->
+									</div>
+		
+								</div>
+				
+							</div>
+		
+							<div class="newNoteButtons">
+				
+								<div id="closeNewNoteBar">X</div>
+								<!-- <div id="addCheckToNote"><i class="icon-lightcheck"></i></div> -->
+								<div id="sendNote">&#x2713;</div>
+				
+							</div>
+				
+						</div>
+					</div>
+				
+				</div>
+				
+				<div class="collapsibleChildNewNote"> 
+
+					<div class="displayCategoryDropdown">
+					
+						<div class="dropdown categoryDropdownPosition">
+	
+							<button class="dropdownFace shadow2"><i class="icon-lightlista"></i></button>
+							
+							<div class="dropdown-content dropdown-content-rigth">
+								
+								<div><a href="#" class="displayAllCategories" id="displayAllCategories">All</a></div>
+
+								<div class="categoriesFromDB"  id="displayCategoriesFromDB">
+									<!-- Here will appear the options for displaying the notes -->
+								</div>
+
+							</div>
+						</div>
+						
+					</div>
+				</div>
+
+			</div>
+			
+
+			<div class="containerOfNotesFromDB">
+				<!-- Here are displayed all the notes form the DB -->
+			</div>
+
+		</div>
+
+		<div class="calendar menuContent" id="calendarID">  <!-- Calendar -->
+			
+			<div class="underConstructionMsg">
+				<div class="msg">
+					<p>Website</p>
+					<p>under</p>
+					<p>construction!</p>
+				</div>
+
+				<div class="img">
+					<img src="img/bg/pngfuel.com.png" alt="">
+				</div>
+			</div>
+		
+		</div>
+
+		<div class="reminders menuContent" id="remindersID"> <!-- Reminders -->
+			
+			<div class="underConstructionMsg">
+				<div class="msg">
+					<p>Website</p>
+					<p>under</p>
+					<p>construction!</p>
+				</div>
+
+				<div class="img">
+					<img src="img/bg/pngfuel.com.png" alt="">
+				</div>
+			</div>
+		
+		</div>
+
+		<div class="links menuContent" id="linksID"> <!-- Links -->
+
+			<div class="collapsableAndCategory"> <!-- Links collapsable and category show dropdown -->
+
+				<div class="collapsableAddNew"> <!-- Add new link -->
+
+					<div class="addNewBtn">
+
+						<input type="url" id="inputAddNewLinkTitle" placeholder="Add new link..." pattern="https?://.+" title="Include http://">
+
+					</div>
+
+					<div class="collapsableContent">
+
+						<textarea placeholder="Paste link here..."></textarea>
+
+					</div>
+
+					<div class="secondaryCollapsableMenu popup">
+
+						<span>Category: </span>
+
+						<span class="pickedCategory" id="fillingUpWith[pickedCategory]">Example category 1</span>
+
+						<div class="popupMenu popupMenuBR">
+
+							<div class="fillingUpWith[linksCategories]">
+								<a href="#">Example category 1</a>
+								<a href="#">Example category 2</a>
+								<a href="#">Example long category displayed 3</a>
+							</div>	
+
+							<div class="inputInPopup">
+
+								<div class="inputDisplayButton">
+									<a href="#">+ New category</a>
+								</div>
+
+								<div class="inputArea">
+									<input type="text" placeholder="Add new category" value="Uncategorised" id="" onfocus="this.select()">
+								</div>
+
+							</div>
+							
+						</div>
+
+					</div>
+
+					<div class="collapsableBottomButtons">
+
+						<div class="cancelButton">X</div>
+
+						<div class="sendButton">✓</div>
+
+					</div>
+
+				</div>
+
+				<div class="displayCategoriesBtn popup popupRelative">
+
+					<i class="icon-lightlista"></i>
+
+					<div class="popupMenu displayCategoriesBtnPopupPosition">
+						
+						<div>
+							<a href="#">All</a>
+						</div>
+
+						<div class="fillingUpWith[linksCategories]">
+							<a href="#">Example category 1</a>
+							<a href="#">Example category 2</a>
+							<a href="#">Example long category displayed 3</a>
+						</div>
+						
+					</div>
+
+				</div>
+
+			</div>
+
+			<div id="fillingUpWith[linksFromDB]" class="containerItemsFromDb"> <!-- Links brougth form DB -->
+
+				<div class="individualLink"> <!-- Example link 1-->
+					
+					<div class="individualLinkPic">
+
+						<img class="" src="img/bg/fb.jpg" alt="Favicon" height="42" width="42">
+
+						<div class="hoverPic">
+							<a href="#" target="_blank"><i class="icon-lightlinks"></i></a>
+						</div>
+
+					</div>
+				
+					<div class="individualLinkInfo">
+
+						<div class="header">
+
+							<div class="title"><span>Facebook</span></div>
+
+							<div class="menuarea">
+
+								<div class="menu popup popupRelative">
+
+									<i class="icon-lightdropmenu"></i>
+					
+									<div class="popupMenu  circleMenu">
+
+										<a href="#">Edit</a>
+
+										<a href="#" class="deleteBtn">Delete</a>
+									
+										<div class="deleteOptions" id="deleteOptions">
+
+											<a href="#" class="deletingNoteYes">Yes?</a>
+										
+
+										</div>
+
+									</div>
+
+								</div>
+
+							</div>
+
+						</div>
+
+						<div class="body">
+							<span>https://www.facebook.com/</span>
+						</div>
+				
+					</div>
+
+				</div>
+
+				<div class="individualLink"> <!-- Example link 2-->
+					
+					<div class="individualLinkPic">
+
+						<img class="" src="img/bg/fb.jpg" alt="Favicon" height="42" width="42">
+
+						<div class="hoverPic">
+							<a href="#" target="_blank"><i class="icon-lightlinks"></i></a>
+						</div>
+
+					</div>
+				
+					<div class="individualLinkInfo">
+
+						<div class="header">
+
+							<div class="title"><span>Facebook long text example</span></div>
+
+							<div class="menuarea">
+
+								<div class="menu popup popupRelative">
+
+									<i class="icon-lightdropmenu"></i>
+					
+									<div class="popupMenu  circleMenu">
+
+										<a href="#">Edit</a>
+
+										<a href="#" class="deleteBtn">Delete</a>
+									
+										<div class="deleteOptions" id="deleteOptions">
+
+											<a href="#" class="deletingNoteYes">Yes?</a>
+										
+
+										</div>
+
+									</div>
+
+								</div>
+
+							</div>
+
+						</div>
+
+						<div class="body">
+							<span>https://www.facebook.com/longlinksexample</span>
+						</div>
+				
+					</div>
+
+				</div>
+
+			</div>
+		
+		</div>
+
+		<div class="contacts menuContent" id="contactsID"> <!-- Contacts -->
+			
+			<div class="container">
+
+				<div class="contactList" id="contactList">
+
+					<div class="swapTextDirecction">
+
+						<div class="addNewContactButton"><span>+ New contact</span></div>
+
+						<div class="vocalSeparator"><span>D</span></div>
+
+						<div class="contactName"><span>Diego Rincon</span></div>
+
+						<div class="contactName"><span>Diana Robles</span></div>
+
+						<div class="vocalSeparator"><span>L</span></div>
+
+						<div class="contactName"><span>Laura Lujan</span></div>
+
+						<div class="vocalSeparator"><span>T</span></div>
+
+						<div class="contactName"><span>Thanos Matagente Mano</span></div>
+
+					</div>
+				</div>
+
+				<div class="contactShown" id="contactShown">
+
+					<div class="topMenu">
+						<span class="topMenuBtn" id="backFromCS">&#8629;</span>
+						<span id="name">Diego Rincon</span>
+						<span class="topMenuBtn" id="editCnt">&#128393;</span>
+					</div>
+
+					<form action="">
+
+						<div class="contactPhoto">
+
+							<i class="icon-lightchangepic"></i>
+
+						</div>
+
+						<div class="inputCouple">
+							<label for="mobile">Mobile</label><br>
+							<input class="inputFields" type="tel" name="mobile" id="mobile" pattern="[0-9]{9}" placeholder="+44 123-456-7890" value="+44 123-456-7890" disabled="disabled">
+						</div>
+
+						<div class="inputCouple">
+							<label for="phone">Phone</label><br>
+							<input class="inputFields" type="tel" name="phone" id="phone" pattern="[0-9]{9}" placeholder="+44 123-456-7890" value="+44 123-456-7890" disabled="disabled">
+						</div>
+
+						<div class="inputCouple">
+							<label for="email">Email:</label>
+							<input class="inputFields" type="email" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="example@example.com" value="example@example.com" disabled="disabled">
+						</div>
+
+						<div class="inputCouple">
+							<label for="Address">Address:</label>
+							<textarea class="inputFields" name="Address" id="Address" cols="30" rows="4" placeholder="Address line 1&#10;Address line 2&#10;Town/City&#10;Postcode" disabled>Address line 1&#10;Address line 2&#10;Town/City&#10;Postcode</textarea>
+						</div>
+
+						<div class="inputCouple bottomBtn">
+							<span class="dBtn">Delete</span>
+						</div>
+
+					</form>
+
+				</div>
+		
+			</div>
+		</div>
+
+		<div class="passwords menuContent" id="passwordsID"> <!-- Passwords -->
+			
+			<div class="container">
+
+				<div class="contactList" id="contactList">
+
+					<div class="swapTextDirecction">
+
+						<div class="addNewContactButton"><span>+ New password</span></div>
+
+						<div class="vocalSeparator"><span>F</span></div>
+
+						<div class="contactName"><span>Facebook</span></div>
+
+						<div class="contactName"><span>Flicker</span></div>
+
+						<div class="vocalSeparator"><span>G</span></div>
+
+						<div class="contactName"><span>Gmail</span></div>
+
+						<div class="vocalSeparator"><span>M</span></div>
+
+						<div class="contactName"><span>Mega downloader</span></div>
+
+					</div>
+				</div>
+
+				<div class="contactShown" id="contactShown">
+
+					<div class="topMenu">
+						<span class="topMenuBtn" id="backFromCS">&#8629;</span>
+						<span id="name">Gmail</span>
+						<span class="topMenuBtn" id="editCnt">&#128393;</span>
+					</div>
+
+					<form action="">
+
+						<div class="inputCouple">
+							<label for="username">Username</label><br>
+							<input class="inputFields" type="text" name="username" id="username" placeholder="@username" value="@username" disabled="disabled">
+
+							<div class="cntBtns">
+								<span class="btn">Copy</span>
+							</div>
+						</div>
+
+						<div class="inputCouple">
+							<label for="url">Website URL</label><br>
+							<input class="inputFields" type="url" name="url" id="url" placeholder="https://www.example.com" value="https://www.example.com" disabled="disabled">
+
+							<div class="cntBtns">
+								<span class="btn">&#127758;</span>
+								<span class="btn">Copy</span>
+							</div>
+
+						</div>
+
+						<div class="inputCouple">
+							<label for="emaill">Email</label>
+							<input class="inputFields" type="email" id="emaill" name="emaill" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="example@example.com" value="example@example.com" disabled="disabled">
+
+							<div class="cntBtns">
+								<span class="btn">Copy</span>
+							</div>
+						</div>
+
+						<div class="inputCouple">
+							<label for="password">Password</label>
+							<input class="inputFields" type="password" id="password" name="password" placeholder="example" value="example" disabled="disabled">
+
+						<div class="cntBtns">
+							<span class="btn">👁</span>
+							<span class="btn">Copy</span>
+						</div>
+
+						</div>
+
+						<div class="inputCouple">
+							<label for="note">Note:</label>
+							<textarea class="inputFields" name="note" id="note" cols="30" rows="4" placeholder="Write your&#10;note here!" disabled>Write your&#10;note here!</textarea>
+						</div>
+
+						<div class="inputCouple bottomBtn">
+							<span class="dBtn">Delete</span>
+						</div>
+
+					</form>
+
+				</div>
+		
+			</div>
+		</div>
+		</div>
+
+		<div class="bin menuContent" id="binID"> <!-- Bin -->
+			
+			<div class="individualLink"> <!-- Example link 1-->
+					
+				<div class="individualLinkPic">
+
+					<img class="" src="img/bg/fb.jpg" alt="Favicon" height="42" width="42">
+
+					<div class="hoverPic">
+						<a href="#" target="_blank"><i class="icon-lightlinks"></i></a>
+					</div>
+
+				</div>
+			
+				<div class="individualLinkInfo">
+
+					<div class="header">
+
+						<div class="title"><span>Facebook</span></div>
+
+						<div class="menuarea">
+
+							<div class="menu popup popupRelative">
+
+								<i class="icon-lightdropmenu"></i>
+				
+								<div class="popupMenu  circleMenu">
+
+									<a href="#" class="deleteBtn">Delete permanently</a>
+								
+									<div class="deleteOptions" id="deleteOptions">
+
+										<a href="#" class="deletingNoteYes">Yes?</a>
+									
+
+									</div>
+
+								</div>
+
+							</div>
+
+						</div>
+
+					</div>
+
+					<div class="body">
+						<span>https://www.facebook.com/</span>
+					</div>
+			
+				</div>
+
+			</div>
+		
+		</div>
+
+	</div>
+
+</div>
+
+
+
+<div id="myModal" class="modal"> <!-- Modal used for editing notes -->
+
+	<div class="modal-content newNoteBarContainer" id="newNoteBarContainerModal"> <!-- Modal content -->
+	
+		<div class="buttonsAndInputSeparator">
+
+			<div>
+				<input type="hidden" id="newNoteIdInputModal">
+			</div>
+
+			<div>
+				<input type="text" placeholder="Add new note..." class="newNoteBarItemStyle newNoteBarTitle" id="newNoteTitleInputModal" value="">
+			</div>
+
+			<div>
+				<textarea name="" id="newNoteInputModal" cols="100" rows="10" placeholder="Type here..." class="newNoteBarItemStyle newNoteBarBody" value=""></textarea>
+			</div>
+
+			<div class="newNoteCategoryAndNewNoteDateParent">
+
+				<div class="smallOptionsStyle newNoteCategory">
+
+					<div class="displayCategoryDropdown">
+						
+						<div class="dropdown ">
+							<p>Category: <span id="displayInputValueCategoryModal"></span></p>
+							
+							<div class="dropdown-content">										
+								
+								<div class="categoriesFromDB" id="addNewNoteCategoryModal">
+									<!-- all the categories from DB -->
+								</div>
+								
+								<div class="createNewCategory">
+									<a href="#">+ new category</a>
+									<input type="text" placeholder="Add new category" value="Uncategorised" id="inputAssignCategoryForNewNoteModal">
+								</div>
+
+							</div>
+						</div>
+						
+					</div>
+
+				</div>
+
+				<div class="smallOptionsStyle newNoteDate">
+					<!-- <p>Creation: <span id="todayDate">Today date appears here!! Also can be used to display small updates to users!</span></p> -->
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="newNoteButtons">
+
+			<div id="closeNewNoteBarModal" class="close">x</div>
+			<!-- <div id="addCheckToNote"><i class="icon-lightcheck"></i></div> -->
+			<div id="sendNoteModal">&#x2713;</div>
+
+		</div>
+
+	</div>
+
+</div>
+
+
+
+
+
+<div class="niceAlert" id="niceAlert"> <!--NICE ALERT-->
+	
+	<p>Texto de prueba</p>
+
+</div>
+
+<footer><!-- Start footer of the website -->
+	
+</footer><!-- End footer of the website -->
+
+
+
+<!-- Calling the scripts start-->
+<script type="module" src="js/page2.js"></script>
+<!-- Calling the scripts end-->
+
+</body>
+</html>

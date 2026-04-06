@@ -1,0 +1,182 @@
+body{
+	background-color: #EAEAEA;
+	
+}
+
+* {
+font-family: 'Open Sans', sans-serif;
+font-size: 1rem;
+}
+
+
+
+/*== NAV BAR START ==*/
+
+nav{
+	background-color:#DADADA;
+	border-bottom: solid black 1px;
+	padding-top: 2px;
+	height: 3.5rem;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.section{
+	min-width: 2.75rem;
+	height: 100%;
+	max-height: 2.75rem;
+	padding: 0rem 0.5rem;
+}
+
+nav .fa-bars:hover{
+	color:#868200;
+}
+
+.profilePic{
+	height: 2.5rem;
+	width: 2.5rem;
+	border-radius: 50%;
+	background-color: darkviolet;
+	border: dashed 1px black;
+}
+
+/*== == == == == ==*/
+
+
+
+/*== MENU START ==*/
+
+.menustyle{
+	width: 15.6rem;
+	background-color:#DADADA;
+	min-height: 500px;
+	left: -260px;
+	position: fixed;
+	transition: all 0.3s ease-in;
+	z-index: 1;
+}
+
+.menuStyleShow{
+	left: 0;
+}
+
+.menustyle ul li a{
+	display: block;
+	padding: 10px;
+	font-size: 1.2rem;
+	height: 22px;
+}
+
+.menustyle ul li a:hover{
+	background-color: darkgray;
+}
+
+.navButtomBtns {
+	position: absolute;
+	bottom:0px;
+}
+
+/*== == == == == ==*/
+
+/*== SEARCH BAR ==*/
+
+.search {
+	text-align: center;
+	padding: 0.5rem;
+}
+    
+.searchInput {
+	width: 100%;
+	max-width: 250px;
+	padding: 10px 0px;
+
+	background-color: transparent;
+	transition: transform 250ms ease-in-out;
+	font-size: 14px;
+	line-height: 18px;
+	
+	color: #575756;
+	background-color: transparent;
+	border-radius: 50px;
+	border: 1px solid #575756;
+	transition: all 250ms ease-in-out;
+	backface-visibility: hidden;
+	transform-style: preserve-3d;
+}
+.searchInput::placeholder {
+	color: color(#575756 a(0.8));
+	text-transform: uppercase;
+	letter-spacing: 1.5px;
+	padding-left: 1rem;
+}
+        
+.searchInput:hover,
+.searchInput:focus {
+	padding: 12px 0;
+	outline: 0;
+	border: 1px solid transparent;
+	border-bottom: 1px solid #575756;
+	border-radius: 0;
+	background-position: 100% center;
+}
+
+/*== == == == == ==*/
+
+/*== LOGO IN CENTER OF NAV BAR ==*/
+
+.navBarHeight{
+	height: 2.75rem;
+}
+
+/*== == == == == ==*/
+
+
+
+/*== PROFILE MENU START ==*/
+
+.profileMenuStyle{
+	background-color:#DADADA;
+	width: 15.6rem;
+	min-height: 7rem;
+	border: 1px black solid;
+	border-radius: 0.2rem;
+	position: fixed;
+	right: -260px;
+	top: 3.5rem;
+	transition: all 0.3s ease-in;
+	z-index: 1;
+}
+
+
+.profileMenuStyleShow{
+	right: 8px;
+}
+
+
+.profileMenuStyle ul li a img{
+	width: 25px;
+	margin-right: 10px;	
+	float: left;
+}
+
+.profileMenuStyle ul li a{
+	display: block;
+	padding: 10px;
+	font-size: 1.2rem;
+	height: 22px;
+}
+
+.profileMenuStyle ul li a:hover{
+	background-color: darkgray;
+}
+
+/*== == == == == ==*/
+
+
+.menuContent {
+	display: none;
+}
+
+.sh{
+	display: block;
+}

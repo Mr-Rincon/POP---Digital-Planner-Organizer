@@ -1,0 +1,121 @@
+* {
+font-family: 'Open Sans', sans-serif;
+font-size: 1rem;
+}
+
+body{
+	/* background-color: #E1E6EC; */
+	background-color: #EAEAEA;
+
+	background-image: url('../img/bg/bgpic8.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+#content-box{
+	box-sizing: border-box;
+	padding: 1rem;
+	max-width: 1300px;
+	margin: 0 auto;
+}
+
+/*==  === === DEFAULT VIEWS === === === */
+
+#defaultView{
+	text-align: center;
+}
+
+#bigMenu{
+	margin: 100px auto;
+	padding: 6px;
+	min-height: 300px;
+    width: 500px;
+    border-radius: 8px;
+    /* background-color: #E1E6EC; */
+	background-color: #EAEAEA;
+    box-shadow: 5px 5px 11px #A2B1C6 , -5px -5px 11px  #eee  ;
+    text-align: center;
+	border: solid #eee 1px;
+}
+
+#bigMenu h1{
+    font-size: 2rem;
+	margin: 12px 0 12px 0;
+	color:  rgb(106, 164, 245);
+	padding-bottom: 2rem;
+}
+
+
+.bigMenuButtonsParent {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+}
+
+
+.bigMenuButtons{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+    padding: 26px;
+    border-radius: 50%;
+    /* background-color: #E1E6EC; */
+	background-color: #EAEAEA;
+    margin: 10px 9px;
+    border: none;
+    box-shadow: 2px 2px 5px #A2B1C6 , -2px -2px 11px  #fff  ;
+	font-size: 3rem;
+	color: #313;
+}
+
+
+.bigMenuButtons:active{
+    background: #E1E6EC;
+    box-shadow: inset 2px 2px 5px #A2B1C6 , -2px -2px 11px  #fff  ;
+}
+
+
+.bigMenuButtons:hover{
+	cursor: pointer;
+}
+
+
+.emptyAreaMessage {
+	color: rgb(129, 114, 163);
+	font-size: 3rem;
+	width: 100%;
+}
+
+/*==  === === === === === */
+
+
+
+
+
+/* == RESPONSIVE ACTIONS == */
+
+@media (max-width: 600px) {
+
+.item {
+	flex: 1 1 auto;
+}
+
+
+#bigMenu{
+	width: 300px;
+	margin: 50px auto;
+}
+
+#content-box{
+	height: auto;
+}
+
+
+}
+
+
+
+/* === === === === ===  === === === === ===  === === === === === */

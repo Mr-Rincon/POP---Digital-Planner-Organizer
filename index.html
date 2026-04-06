@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta property="og:url"           content="http://diegos-link.c1.biz/" /> <!-- Open Graph tags to customize shared link previews. -->
+	<meta property="og:type"          content="website" />
+	<meta property="og:title"         content="POP" />
+	<meta property="og:description"   content="The golden organizator, organize your life with Pop." />
+	<meta property="og:image"         content="http://diegos-link.c1.biz/pop/logo.png" />
+	<title>POP - Home</title>
+	<link rel="stylesheet" type="text/css" href="css/toolsKit.css">
+	<link rel="stylesheet" type="text/css" href="css/indexStyle.css">
+</head>
+
+<body>
+
+	<div class="formBox shadow1">
+
+		<section class="formHead align-center">
+			<p>POP</p>
+			<img src="img/logo/logo.png" alt="">
+			<h2>the <span class="goldenText"> GOLDEN</span> organizer</h2>
+		</section>
+
+		<div class = "tabinator topTabs align-center"> <!---->
+
+			<input type = "radio" id = "tab1" name = "tabs" checked>
+			<label for = "tab1">Log in</label>
+			<input type = "radio" id = "tab2" name = "tabs">
+			<label for = "tab2">Sign up</label>
+			<input type = "radio" id = "tab3" name = "tabs">
+			
+		<div id = "content1">
+			<form method="post" class="align-left formulario">
+				<br><br>
+				<label for="email" class="smallLabel">Email</label>
+				<input type="text" name="email" placeholder="example@example.com" class="inPut">
+				<div class="errorMsg"></div>
+				<br><br>
+				<label for="password" class="smallLabel">Password</label>
+				<input type="password" name="password" placeholder="Password" class="inPut">
+				<div class="errorMsg"></div>
+				<p class="align-right p1">
+					<label for = "tab3" class="smallText link-style">forgot password?</label>
+				</p>
+				<br><br>
+				<div class="align-center btnStyle">
+					<input type="submit" name="login" value="Log in">
+				</div>
+			</form>
+		</div>
+
+		<div id = "content2">
+			<form method="post" class="align-left formulario">
+				<br><br>
+				<label for="name" class="smallLabel">Name</label>
+				<input type="text" name="name" placeholder="John Smith" class="inPut">
+				<div class="errorMsg"></div>
+				<br><br>
+				<label for="email" class="smallLabel">Email</label>
+				<input type="email" name="email" placeholder="example@example.com" class="inPut">
+				<div class="errorMsg"></div>
+				<br><br>
+				<label for="password" class="smallLabel">Password</label>
+				<input type="password" name="password" placeholder="Password" class="inPut">
+				<div class="errorMsg"></div>
+				<br><br>
+				<label for="password" class="smallLabel">Retype Password</label>
+				<input type="password" name="password" placeholder="Retype Password" class="inPut">
+				<div class="errorMsg"></div>
+				<p class="smallText margin-T2r dis-flex vAlign-center margin-1r"><input type="checkbox" required="true"> Accept&nbsp;<span class="blackText link-style"> Terms &amp; Conditions</span></p>
+				<div class="align-center btnStyle">
+					<input type="submit" name="login" value="Sign up">
+				</div>
+			</form>
+		</div>
+
+		<div id = "content3">
+			<form method="post" class="align-left formulario">
+				<br><br>
+				<label for="email" class="smallLabel">Email</label>
+				<input type="email" name="email" placeholder="example@example.com" class="inPut">
+				<div class="errorMsg"></div>
+				<div class="warningMsg" id="resetWarning"></div>
+				<br><br>
+				<div class="align-center btnStyle">
+					<input type="submit" name="login" value="Reset">
+				</div>		
+			</form>
+		</div>
+
+		</div>
+
+	</div>
+
+	<!-- SCRIPTS DOWN HERE \|/ -->
+	<script type="module" src="js/index.js"></script>
+</body>
+
+</html>

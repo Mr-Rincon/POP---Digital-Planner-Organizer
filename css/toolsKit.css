@@ -1,0 +1,221 @@
+/* ### RESETER ### */
+
+header, html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+	margin-block-start: 0px;
+	margin-block-end: 0px;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* No olvides definir estilos para focus */
+:focus {
+  outline: 0;
+}
+
+/* No olvides resaltar de alguna manera el texto insertado/borrado */
+ins {
+  text-decoration: none;
+}
+del {
+  text-decoration: line-through;
+}
+
+/* En el código HTML es necesario añadir cellspacing="0" */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* unvisited link */
+a:link, a:visited, a:hover, a:active{
+	color: black;
+	text-decoration: none;
+}
+
+
+/* ### BASICS ### */
+
+.align-center{
+text-align: center;
+}
+
+.align-left{
+	text-align: left;
+}
+
+.align-right{
+text-align: right;
+}
+
+.dis-flex{
+	display: flex;
+}
+
+.hAlign_center{
+justify-content: center;
+}
+
+.vAlign-center{
+	align-items: center;
+}
+
+.margin-1r{
+	margin: 1rem;
+}
+
+.float-left{
+	float: left;
+}
+
+.link-style:hover{
+	cursor: pointer;
+	color: darkgoldenrod;
+}
+
+.blackText{
+	color: black;
+}
+
+.goldenText{
+	color: goldenrod;
+}
+
+.margin-T10{
+	margin-top: 10px;
+}
+
+
+
+.mousePointer:hover{ /* Set mouse as pointer when is over the picture */
+	cursor: pointer;
+}
+
+
+
+/* ### FLEX BOX ### */
+
+.fboxWrapVAandHACenter{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: flex-start;
+}
+
+
+.makeitFlexBoxParentSpaceBetween{	
+	display: flex;
+	justify-content: space-between;
+	align-items:center;
+}
+
+.makeitFlexBoxParentCenter{	
+	display: flex;
+	justify-content: center;
+	align-items:center;	
+}
+
+
+.topCenterFlexBoxParent{
+    display: -ms-inline-flexbox;
+    display: -webkit-inline-flex;
+    display: inline-flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-align-content: flex-start;
+    -ms-flex-line-pack: start;
+    align-content: flex-start;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+/* ### SHADOWS ### */
+.shadow1{
+	-webkit-box-shadow: 1px 4px 15px 2px rgba(0,0,0,0.55);
+	-moz-box-shadow: 1px 4px 15px 2px rgba(0,0,0,0.55);
+	box-shadow: 1px 4px 15px 2px rgba(0,0,0,0.55);
+}
+
+.shadow2{
+	-webkit-box-shadow: 1px 2px 5px 1px rgba(0,0,0,0.55);
+	-moz-box-shadow: 1px 2px 5px 1px rgba(0,0,0,0.55);
+	box-shadow: 1px 2px 5px 1px rgba(0,0,0,0.55);
+}
+
+
+
+
+.underConstructionMsg{ /* === Display message on the unfinished pages "Website under construction" === */
+  text-align: center;
+}
+
+.underConstructionMsg .msg{
+  font-size: 7rem;
+  font-weight: bold;
+  color: brown;
+  background-color: #cfd87d;
+  border: 2rem solid black;
+}
+
+.underConstructionMsg img{
+  margin-top: 3rem;
+}
+
+
+@media (max-width: 800px) {
+
+  .underConstructionMsg .msg{
+    font-size: 4.5rem;
+    border: 1rem solid black;
+  }
+
+  .underConstructionMsg img{
+    width: 100%;
+  }
+  
+}
+
+
+@media (max-width: 550px) {
+
+.underConstructionMsg .msg{
+  font-size: 2rem;
+}
+
+} /* === === === === === === === === === === === === === === === === === */

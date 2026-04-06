@@ -1,0 +1,188 @@
+.contacts .container{
+    display: flex;
+    justify-content: center;
+}
+
+.contactList{
+    box-sizing: border-box;
+    background-color: #ddd;
+    padding-top: 15px;
+    width: 350px;
+    height: 90vh;
+    border: 1px solid black;
+    overflow: auto;
+    direction:rtl;
+}
+
+.contactList .swapTextDirecction{
+    direction:ltr;
+}
+
+
+.contactList::-webkit-scrollbar {
+    width: 4px;
+}
+
+.addNewContactButton{
+    margin: 0 auto;
+    box-sizing: border-box;
+    height: 50px;
+    width: 90%;
+    background: #aec58f;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;
+    box-shadow: 0 8px 6px -6px black;
+    border-radius: 3px;
+}
+
+.contactName:hover, .addNewContactButton:hover, .topMenuBtn:hover{
+    filter: brightness(0.8);
+    cursor: pointer;
+}
+
+.vocalSeparator{
+    padding-top: 15px;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contactName{
+    margin: 5px 0px 5px auto;
+    box-sizing: border-box;
+    height: 50px;
+    width: 95%;
+    background: #d8d5d5;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    border: 1px solid #ccc;
+    /* box-shadow: 0 8px 6px -6px black; */
+}
+
+.contactName span, .contactShown .topMenu #name{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+.contactShown{
+    box-sizing: border-box;
+    background-color: #ddd;
+    width: 350px;
+    height: 90vh;
+    border: 1px solid black;
+    font-size: 1.5rem;
+}
+
+.contactShown .topMenu{
+    width: 100%;
+    height: 50px;
+    background-color: lightgray;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.topMenuBtn:first-child{visibility: hidden;}
+
+.contactShown .topMenu .topMenuBtn{
+    border: 2px solid #ccc;
+    padding: 3px 10px;
+    border-radius: 3px;
+    line-height: 2rem;
+    font-size: 2rem;
+    margin: 0 10px;
+}
+
+.contactShown .contactPhoto{
+    width: 150px;
+    height: 150px;
+    background-color: lightsalmon;
+    border-radius: 50%;
+    margin: 10px auto;
+    background-image: url(../img/user.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    cursor: pointer;
+}
+
+.contactShown .contactPhoto i{
+    display: none;
+    font-size: 3rem;
+    position: absolute;
+    left: 50px;
+    top: 90px;
+}
+.contactShown .contactPhoto:hover{
+    opacity: 0.7;
+}
+.contactShown .contactPhoto:hover i{
+    display: block;
+}
+
+.inputCouple{
+    box-sizing: border-box;
+    width: 90%;
+    background-color: #ddd;
+    margin: 0 auto;
+    padding: 10px 0px;
+}
+.inputCouple label{
+    font-weight: bold;
+}
+
+.inputCouple input, .inputCouple textarea{
+    background-color: #ddd;
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    padding: 5px;
+    padding-bottom: 0px;
+    line-height: 2rem;
+    font-size: 1.5rem;
+}
+
+.inputCouple textarea{
+    resize: none;
+}
+
+.contactShown .bottomBtn{
+    margin-top: 32px;
+    text-align: center;
+}
+
+.contactShown .bottomBtn .dBtn{
+    width: 150px;
+    height: 32px;
+    background-color: #EC5D67;
+    padding: 12px 18px;
+    border-radius: 3px;
+    cursor: pointer;
+    color: white;
+    box-shadow: 0 1px 1px rgba(0,0,0,.11), 0 2px 2px rgba(0,0,0,.11), 0 4px 4px rgba(0,0,0,.11), 0 6px 8px rgba(0,0,0,.11), 0 8px 16px rgba(0,0,0,.11);
+    transition: all 0.4s ease 0s;
+}
+
+.contactShown .bottomBtn .dBtn:hover{
+    filter: brightness(0.8);
+    letter-spacing: 3px;
+}
+
+
+
+@media (max-width: 700px) {
+
+    .topMenuBtn:first-child{visibility: visible;}
+    .contactShown{display: none;}
+    
+}
